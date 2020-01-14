@@ -3,10 +3,59 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>Invoice</ion-title>
+  <ion-title>Cuci Bas</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
 
+<ion-content>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col>
+        <ion-card color="secondary" (click)="addPlate()">
+          <ion-card-header>
+            <ion-card-title style="font-size: xx-large;">Plate No : {{ plate }}</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row justify-content-start>
+      <ion-col size="auto" *ngFor="let card of services">
+        <ion-card color="primary" (click)="selectService(card)">
+          <ion-card [ngStyle]="{'background': card.selected ? 'var(--ion-color-primary)' : 'var(--ion-color-light)'}" style="webkit-box-shadow: none; box-shadow: none; margin: 3px;">
+            <ion-card-header>
+              <ion-card-title>
+                <ion-item
+                  lines="none"
+                  style="--background: rgba(255, 255, 255, 0);"
+                >
+                  <ion-label
+                    style="font-size: 30px; padding: unset; white-space: pre-wrap; margin: unset;"
+                    [ngStyle]="{'color': card.selected ? 'var(--ion-color-light)' : 'var(--ion-color-dark)'}"
+                    >{{ card.desc }}</ion-label
+                  >
+                  <!-- <ion-icon
+                      [name]="card.icon"
+                      style="zoom: 2;"
+                      color="light"
+                    ></ion-icon> -->
+                </ion-item>
+                <ion-item
+                  lines="none"
+                  style="--background: rgba(255, 255, 255, 0); padding-top: unset;"
+                >
+                  <ion-label
+                    [ngStyle]="{'color': card.selected ? 'var(--ion-color-light)' : 'var(--ion-color-secondary)'}"
+                    style="font-size: 20px; padding: unset; margin: unset;"
+                  >
+                    {{ card.type }}
+                  </ion-label>
+                </ion-item>
+              </ion-card-title>
+            </ion-card-header>
+          </ion-card>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

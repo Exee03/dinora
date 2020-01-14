@@ -1,0 +1,44 @@
+<ion-content color="secondary">
+  <ion-grid no-padding>
+    <ion-row>
+      <ion-col style="padding: unset;">
+        <ion-item color="secondary" style="height: 100px; padding: unset;" lines="none">
+        <ion-label style="text-align: end; zoom: 2; font-size: larger;">{{frontText}} {{ num }}</ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="dark">
+    <ion-grid fixed>
+      <ion-row>
+        <ion-col style="padding: unset;"><ion-item style="height: 80px;" button color="dark" (click)="keyNum(7)"><ion-label style="zoom: 2; text-align: center;">7</ion-label></ion-item></ion-col>
+        <ion-col  style="padding: unset;"><ion-item style="height: 80px;" button color="dark" (click)="keyNum(8)"><ion-label style="zoom: 2; text-align: center;">8</ion-label></ion-item></ion-col>
+        <ion-col style="padding: unset;"><ion-item style="height: 80px;" button color="dark" (click)="keyNum(9)"><ion-label style="zoom: 2; text-align: center;">9</ion-label></ion-item></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col style="padding: unset;"><ion-item style="height: 80px;" button color="dark" (click)="keyNum(4)"><ion-label style=" zoom: 2; text-align: center;">4</ion-label></ion-item></ion-col>
+        <ion-col style="padding: unset;"><ion-item style="height: 80px;" button color="dark" (click)="keyNum(5)"><ion-label style="zoom: 2; text-align: center;">5</ion-label></ion-item></ion-col>
+        <ion-col style="padding: unset;"><ion-item style="height: 80px;" button color="dark" (click)="keyNum(6)"><ion-label style="zoom: 2; text-align: center;">6</ion-label></ion-item></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col style="padding: unset;"><ion-item style="height: 80px;" button color="dark" (click)="keyNum(1)"><ion-label style="zoom: 2; text-align: center;">1</ion-label></ion-item></ion-col>
+        <ion-col style="padding: unset;"><ion-item style="height: 80px;" button color="dark" (click)="keyNum(2)"><ion-label style="zoom: 2; text-align: center;">2</ion-label></ion-item></ion-col>
+        <ion-col style="padding: unset;"><ion-item style="height: 80px;" button color="dark" (click)="keyNum(3)"><ion-label style="zoom: 2; text-align: center;">3</ion-label></ion-item></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col style="padding: unset;"><ion-item style="height: 80px;" button color="dark" (click)="keySpecial('c')">
+          <ion-label style="zoom: 2; text-align: center;">C</ion-label>
+        </ion-item></ion-col>
+        <ion-col style="padding: unset;"><ion-item style="height: 80px;" button color="dark" (click)="keyNum(0)"><ion-label style="zoom: 2; text-align: center;">0</ion-label></ion-item></ion-col>
+        <ion-col style="padding: unset;"><ion-item style="height: 80px;" button color="dark" (click)="keySpecial('del')">
+          <ion-label style="text-align: center; zoom: 2;"><ion-icon  name="arrow-back"></ion-icon></ion-label>
+        </ion-item></ion-col>
+      </ion-row><ion-row>
+        <ion-col style="padding: unset;"><ion-item style="height: 60px;" button color="danger" (click)="close()"><ion-label style="font-weight: bold; text-align: center; font-size: larger;">Cancel</ion-label></ion-item></ion-col>
+        <ion-col style="padding: unset;"><ion-item style="height: 60px;" button color="success" (click)="submit()"><ion-label style="font-weight: bold; text-align: center; font-size: larger;">Enter</ion-label></ion-item></ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-footer>

@@ -15,6 +15,19 @@ const routes: Routes = [
     path: 'invoice',
     loadChildren: () => import('./pages/invoice/invoice.module').then( m => m.InvoicePageModule)
   },
+  {
+    path: 'invoice-layout',
+    loadChildren: () => import('./modals/invoice-layout/invoice-layout.module').then( m => m.InvoiceLayoutPageModule)
+  },
+  {
+    path: 'numpad',
+    loadChildren: () => import('./modals/numpad/numpad.module').then( m => m.NumpadPageModule)
+  },  {
+    path: 'keypad',
+    loadChildren: () => import('./modals/keypad/keypad.module').then( m => m.KeypadPageModule)
+  },
+
+
 ];
 
 @NgModule({

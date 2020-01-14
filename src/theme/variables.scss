@@ -2,6 +2,14 @@
 // http://ionicframework.com/docs/theming/
 
 /** Ionic CSS Variables **/
+
+@font-face {
+  font-family: 'Michroma';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../assets/Michroma-Regular.ttf');
+}
+
 :root {
   --ion-color-primary: #80ff00;
   --ion-color-primary-rgb: 128,255,0;

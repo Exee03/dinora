@@ -1,0 +1,79 @@
+<ion-content color="secondary">
+  <ion-grid no-padding>
+    <ion-row>
+      <ion-col style="padding: unset;">
+        <ion-item color="secondary" style="height: 100px; padding: unset;" lines="none">
+        <ion-label style="text-align: center; zoom: 2; font-size: larger;">{{ word }}</ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="dark">
+    <ion-grid fixed>
+      <ion-row justify-content-center>
+        <ion-col style="padding: unset;"><ion-item  button color="dark" (click)="keyboard('1')"><ion-label style="text-align: center;">1</ion-label></ion-item></ion-col>
+        <ion-col  style="padding: unset;"><ion-item  button color="dark" (click)="keyboard('2')"><ion-label style="text-align: center;">2</ion-label></ion-item></ion-col>
+        <ion-col style="padding: unset;"><ion-item  button color="dark" (click)="keyboard('3')"><ion-label style="text-align: center;">3</ion-label></ion-item></ion-col>
+        <ion-col style="padding: unset;"><ion-item  button color="dark" (click)="keyboard('4')"><ion-label style="text-align: center;">4</ion-label></ion-item></ion-col>
+        <ion-col  style="padding: unset;"><ion-item  button color="dark" (click)="keyboard('5')"><ion-label style=" text-align: center;">5</ion-label></ion-item></ion-col>
+        <ion-col style="padding: unset;"><ion-item  button color="dark" (click)="keyboard('6')"><ion-label style="text-align: center;">6</ion-label></ion-item></ion-col>
+        <ion-col style="padding: unset;"><ion-item  button color="dark" (click)="keyboard('7')"><ion-label style="text-align: center;">7</ion-label></ion-item></ion-col>
+        <ion-col  style="padding: unset;"><ion-item  button color="dark" (click)="keyboard('8')"><ion-label style="text-align: center;">8</ion-label></ion-item></ion-col>
+        <ion-col style="padding: unset;"><ion-item  button color="dark" (click)="keyboard('9')"><ion-label style="text-align: center;">9</ion-label></ion-item></ion-col>
+        <ion-col style="padding: unset;"><ion-item  button color="dark" (click)="keyboard('0')"><ion-label style="text-align: center;">0</ion-label></ion-item></ion-col>
+      </ion-row>
+      <ion-row justify-content-center>
+        <ion-col style="padding: unset;"><ion-item  button color="dark" (click)="keyboard('q')"><ion-label style="text-align: center;">Q</ion-label></ion-item></ion-col>
+        <ion-col  style="padding: unset;"><ion-item  button color="dark" (click)="keyboard('w')"><ion-label style="text-align: center;">W</ion-label></ion-item></ion-col>
+        <ion-col style="padding: unset;"><ion-item  button color="dark" (click)="keyboard('e')"><ion-label style="text-align: center;">E</ion-label></ion-item></ion-col>
+        <ion-col style="padding: unset;"><ion-item  button color="dark" (click)="keyboard('r')"><ion-label style="text-align: center;">R</ion-label></ion-item></ion-col>
+        <ion-col  style="padding: unset;"><ion-item  button color="dark" (click)="keyboard('t')"><ion-label style=" text-align: center;">T</ion-label></ion-item></ion-col>
+        <ion-col style="padding: unset;"><ion-item  button color="dark" (click)="keyboard('y')"><ion-label style="text-align: center;">Y</ion-label></ion-item></ion-col>
+        <ion-col style="padding: unset;"><ion-item  button color="dark" (click)="keyboard('u')"><ion-label style="text-align: center;">U</ion-label></ion-item></ion-col>
+        <ion-col  style="padding: unset;"><ion-item  button color="dark" (click)="keyboard('i')"><ion-label style="text-align: center;">I</ion-label></ion-item></ion-col>
+        <ion-col style="padding: unset;"><ion-item  button color="dark" (click)="keyboard('o')"><ion-label style="text-align: center;">O</ion-label></ion-item></ion-col>
+        <ion-col style="padding: unset;"><ion-item  button color="dark" (click)="keyboard('p')"><ion-label style="text-align: center;">P</ion-label></ion-item></ion-col>
+      </ion-row>
+      <ion-row justify-content-center>
+        <ion-col style="padding: unset;"><ion-item button color="dark" (click)="keyboard('a')"><ion-label style="text-align: center;">A</ion-label></ion-item></ion-col>
+        <ion-col style="padding: unset;"><ion-item button color="dark" (click)="keyboard('s')"><ion-label style="text-align: center;">S</ion-label></ion-item></ion-col>
+        <ion-col style="padding: unset;"><ion-item button color="dark" (click)="keyboard('d')"><ion-label style="text-align: center;">D</ion-label></ion-item></ion-col>
+        <ion-col style="padding: unset;"><ion-item button color="dark" (click)="keyboard('f')"><ion-label style="text-align: center;">F</ion-label></ion-item></ion-col>
+        <ion-col style="padding: unset;"><ion-item button color="dark" (click)="keyboard('g')"><ion-label style="text-align: center;">G</ion-label></ion-item></ion-col>
+        <ion-col style="padding: unset;"><ion-item button color="dark" (click)="keyboard('h')"><ion-label style="text-align: center;">H</ion-label></ion-item></ion-col>
+        <ion-col style="padding: unset;"><ion-item button color="dark" (click)="keyboard('j')"><ion-label style="text-align: center;">J</ion-label></ion-item></ion-col>
+        <ion-col style="padding: unset;"><ion-item button color="dark" (click)="keyboard('k')"><ion-label style="text-align: center;">K</ion-label></ion-item></ion-col>
+        <ion-col style="padding: unset;"><ion-item button color="dark" (click)="keyboard('l')"><ion-label style="text-align: center;">L</ion-label></ion-item></ion-col>
+      </ion-row>
+      <ion-row justify-content-center>
+        <ion-col style="padding: unset;"><ion-item button color="dark" (click)="keyboard('z')"><ion-label style="text-align: center;">Z</ion-label></ion-item></ion-col>
+        <ion-col style="padding: unset;"><ion-item button color="dark" (click)="keyboard('x')"><ion-label style="text-align: center;">X</ion-label></ion-item></ion-col>
+        <ion-col style="padding: unset;"><ion-item button color="dark" (click)="keyboard('c')"><ion-label style="text-align: center;">C</ion-label></ion-item></ion-col>
+        <ion-col style="padding: unset;"><ion-item button color="dark" (click)="keyboard('v')"><ion-label style="text-align: center;">V</ion-label></ion-item></ion-col>
+        <ion-col style="padding: unset;"><ion-item button color="dark" (click)="keyboard('b')"><ion-label style="text-align: center;">B</ion-label></ion-item></ion-col>
+        <ion-col style="padding: unset;"><ion-item button color="dark" (click)="keyboard('n')"><ion-label style="text-align: center;">N</ion-label></ion-item></ion-col>
+        <ion-col style="padding: unset;"><ion-item button color="dark" (click)="keyboard('m')"><ion-label style="text-align: center;">M</ion-label></ion-item></ion-col>
+        <ion-col style="padding: unset;"><ion-item button color="dark" (click)="keySpecial('del')"><ion-label style="text-align: center;"><ion-icon  name="arrow-back"></ion-icon></ion-label></ion-item></ion-col>
+        <ion-col style="padding: unset;"><ion-item button color="dark" (click)="keySpecial('clr')"><ion-label style="text-align: center;">Clear</ion-label></ion-item></ion-col>
+      </ion-row>
+      <ion-row *ngIf="withSpace">
+        <ion-col style="padding: unset;"><ion-item button color="dark" (click)="keyboard(' ')"><ion-label style="text-align: center;">Space</ion-label></ion-item></ion-col>
+      </ion-row>
+      <!-- <ion-row justify-content-center>
+        <ion-col style="padding: unset;"><ion-item style="height: 80px;" button color="dark" (click)="keySpecial('c')">
+          <ion-label style="zoom: 2; text-align: center;">C</ion-label>
+        </ion-item></ion-col>
+        <ion-col style="padding: unset;"><ion-item style="height: 80px;" button color="dark" (click)="keyboard(0)"><ion-label style="zoom: 2; text-align: center;">0</ion-label></ion-item></ion-col>
+        <ion-col style="padding: unset;"><ion-item style="height: 80px;" button color="dark" (click)="keySpecial('del')">
+          <ion-label style="text-align: center; zoom: 2;"><ion-icon  name="arrow-back"></ion-icon></ion-label>
+        </ion-item></ion-col>
+      </ion-row> -->
+      <ion-row>
+        <ion-col style="padding: unset;"><ion-item style="height: 60px;" button color="danger" (click)="close()"><ion-label style="font-weight: bold; text-align: center; font-size: larger;">Cancel</ion-label></ion-item></ion-col>
+        <ion-col style="padding: unset;"><ion-item style="height: 60px;" button color="success" (click)="submit()"><ion-label style="font-weight: bold; text-align: center; font-size: larger;">Enter</ion-label></ion-item></ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-footer>

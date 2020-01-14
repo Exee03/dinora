@@ -1,0 +1,191 @@
+<ion-content>
+  <ion-grid fixed>
+    <ion-row align-items-center>
+      <ion-col size="6">
+        <ion-item lines="none">
+          <ion-label>Cash : </ion-label>
+          <ion-title>RM {{ cash }}</ion-title>
+        </ion-item>
+        <ion-item>
+          <ion-label>Total :</ion-label>
+          <ion-title>RM {{ total }}</ion-title>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-label>Change : </ion-label>
+          <ion-title style="font-weight: bold;"
+            >RM {{ cash - total }}</ion-title
+          >
+        </ion-item>
+      </ion-col>
+      <ion-col size="6"
+        ><!--
+        1)- Add an ID here
+      -->
+        <div id="print-section">
+          <div id="invoice-POS">
+            <!-- <center id="top"> -->
+            <!-- <div class="logo"></div> -->
+            <div class="info">
+              <h1
+                style="text-align: center; font-family: Michroma; line-height: 0.1em;"
+              >
+                dinora
+              </h1>
+              <p
+                style="text-align: center; font-size: smaller; line-height: 0.1em; padding-top: 5px;"
+              >
+                (RA0029267-T)
+              </p>
+              <h2
+                style="text-align: center; font-size: smaller; line-height: 0.01em;"
+              >
+                DEPOH BAS KUALA PERLIS
+              </h2>
+              <p style="text-align: center; font-size: smaller;">
+                Lot 24, Kawasan Perindustrian Kuala Perlis, 02000 K.P.,
+                Perlis<br />
+                Tel: 017-2400 466 / 017-2400 966<br />
+                Email: dinora.kualaperlis@gmail.com
+              </p>
+              <hr />
+            </div>
+            <!--End Info-->
+            <!-- </center>End InvoiceTop -->
+
+            <div id="mid">
+              <div class="info">
+                <table align="center">
+                  <tr class="service">
+                    <td class="tableitem">
+                      <p style="font-size: small;" class="itemtext">Inv No</p>
+                    </td>
+                    <td class="tableitem">
+                      <p style="font-size: small;" class="itemtext">:</p>
+                    </td>
+                    <td class="tableitem">
+                      <p style="font-size: small;" class="itemtext">
+                        {{ inv }}
+                      </p>
+                    </td>
+                  </tr>
+                  <tr class="service">
+                    <td class="tableitem">
+                      <p style="font-size: small;" class="itemtext">Date</p>
+                    </td>
+                    <td class="tableitem">
+                      <p style="font-size: small;" class="itemtext">:</p>
+                    </td>
+                    <td class="tableitem">
+                      <p style="font-size: small;" class="itemtext">
+                        {{ date }}
+                      </p>
+                    </td>
+                  </tr>
+                  <tr class="service">
+                    <td class="tableitem">
+                      <p style="font-size: small;" class="itemtext">Plate No</p>
+                    </td>
+                    <td class="tableitem">
+                      <p style="font-size: small;" class="itemtext">:</p>
+                    </td>
+                    <td class="tableitem">
+                      <p style="font-size: small;" class="itemtext">
+                        {{ plate }}
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <hr />
+            </div>
+            <!--End Invoice Mid-->
+
+            <div id="bot">
+              <div id="table">
+                <table align="center">
+                  <tr class="tabletitle">
+                    <td class="item">
+                      <p><b>Description</b></p>
+                    </td>
+                    <td class="Hours">
+                      <p><b>Qty</b></p>
+                    </td>
+                    <td class="Rate">
+                      <p><b>Price</b></p>
+                    </td>
+                    <td class="Rate">
+                      <p><b>Amount</b></p>
+                    </td>
+                  </tr>
+
+                  <tr class="service" *ngFor="let item of items">
+                    <td class="tableitem">
+                      <p class="itemtext">{{ item.desc }}</p>
+                    </td>
+                    <td class="tableitem">
+                      <p class="itemtext">{{ item.qty }}</p>
+                    </td>
+                    <td class="tableitem">
+                      <p class="itemtext">{{ item.price }}.00</p>
+                    </td>
+                    <td class="tableitem">
+                      <p class="itemtext">{{ item.qty * item.price }}.00</p>
+                    </td>
+                  </tr>
+
+                  <tr class="tabletitle">
+                    <td></td>
+                    <td></td>
+                    <td class="Rate"><h3>Total</h3></td>
+                    <td class="payment"><h3>{{ total }}.00</h3></td>
+                  </tr>
+                </table>
+
+                <hr />
+              </div>
+              <!--End Table-->
+
+              <div id="legalcopy">
+                <p class="legal" style="text-align: center;">
+                  <b>Thank you!</b> <br />
+                  Please come again.
+                </p>
+              </div>
+            </div>
+            <!--End InvoiceBot-->
+          </div>
+          <!--End Invoice-->
+          <!--Your html stuff that you want to print-->
+        </div>
+
+        <!--
+        2)- Add the directive name in your button (ngxPrint),
+        3)- Affect your ID to printSectionId
+      --></ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-grid fixed>
+      <ion-row>
+        <ion-col>
+          <button
+            style="height:inherit; width: inherit; width: 100%;"
+            printSectionId="print-section"
+            ngxPrint
+          >
+            <ion-button expand="full" color="success">
+              Print
+            </ion-button>
+          </button>
+        </ion-col>
+        <ion-col>
+          <ion-button expand="full" color="danger" (click)="close()">
+            Close
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-footer>
